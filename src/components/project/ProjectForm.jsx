@@ -11,7 +11,7 @@ const ProjectForm = ({ btnText, handleSubmit, projectData }) => {
   const [project, setProject] = useState(projectData || {});
 
   useEffect(() => {
-    fetch("http://localhost:3001/categories", {
+    fetch("https://react-projects-manager-backend.onrender.com/categories", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
