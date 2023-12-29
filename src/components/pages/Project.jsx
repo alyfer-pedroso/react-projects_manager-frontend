@@ -21,7 +21,7 @@ const Project = () => {
   const [type, setType] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:3001/projects/${id}`, {
+    fetch(`https://react-projects-manager-backend.onrender.com/projects/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Project = () => {
       setType("error");
       return;
     }
-    fetch(`http://localhost:3001/projects/${project.id}`, {
+    fetch(`https://react-projects-manager-backend.onrender.com/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Project = () => {
 
     project.cost = newCost;
 
-    fetch(`http://localhost:3001/projects/${project.id}`, {
+    fetch(`https://react-projects-manager-backend.onrender.com/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const Project = () => {
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
     setMessage("");
-    fetch(`http://localhost:3001/projects/${projectUpdated.id}`, {
+    fetch(`https://react-projects-manager-backend.onrender.com/projects/${projectUpdated.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
