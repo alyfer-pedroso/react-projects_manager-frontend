@@ -10,7 +10,7 @@ const NewProject = () => {
     project.cost = 0;
     project.services = [];
 
-    fetch("http://localhost:3001/projects", {
+    fetch("https://react-projects-manager-backend.onrender.com/projects", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
