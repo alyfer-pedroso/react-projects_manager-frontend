@@ -21,7 +21,7 @@ const Projects = () => {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3001/projects", {
+    fetch("https://react-projects-manager-backend.onrender.com/projects", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const Projects = () => {
   }, []);
 
   function removeProject(id) {
-    fetch(`http://localhost:3001/projects/${id}`, {
+    fetch(`https://react-projects-manager-backend.onrender.com/projects/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
